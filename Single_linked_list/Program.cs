@@ -46,6 +46,22 @@ namespace Single_linked_list
                 START = newnode;
                 return;
             }
+            Node previous, current;
+            previous = START;
+            current = START;
+
+            while ((current != null) && (rollNo >= current.rollNumber))
+            {
+                if(rollNo == current.rollNumber)
+                {
+                    Console.WriteLine();
+                    return;
+                }
+                previous.next = current;
+                previous.next = newnode;
+            }
+            newnode.next = current;
+            previous.next = newnode;
         }
     }
     class Program
