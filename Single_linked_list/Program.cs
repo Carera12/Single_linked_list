@@ -186,7 +186,11 @@ namespace Single_linked_list
                             break;
                         case '5':
                             return;
-                        
+                        default:
+                            {
+                                Console.WriteLine("\nInvalid Options");
+                                break;
+                            }
                     }
                 }
                 catch(Exception)
