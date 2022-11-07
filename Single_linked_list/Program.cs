@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -62,6 +63,32 @@ namespace Single_linked_list
             }
             newnode.next = current;
             previous.next = newnode;
+        }
+
+        public bool delNode(int rollNo)
+        {
+            Node previous,current;
+            previous = current = null;
+            if (Search(rollNo, ref previous, ref current) == false)
+                return false;
+            previous.next = current.next;
+            if(current == START)
+                START = START.next;
+            return true;
+        }
+        public bool Search(int rollNo, ref Node previous, ref Node current)
+        {
+            previous = START;
+            current = START;
+            while((current != null)&&(rollNo != current.rollNumber))
+            {
+                previous = current;
+                current = current.next;
+            }
+            if (current == null)
+                return false;
+            else
+                return true;
         }
     }
     class Program
