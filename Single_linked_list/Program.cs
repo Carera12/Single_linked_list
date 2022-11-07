@@ -184,6 +184,8 @@ namespace Single_linked_list
                                     
                             }
                             break;
+                        case '5':
+                            return;
                         
                     }
                 }
