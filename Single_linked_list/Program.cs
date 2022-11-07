@@ -130,7 +130,16 @@ namespace Single_linked_list
                     Console.WriteLine("5. Exit");
                     Console.WriteLine("\nEnter your choice (1-5) : ");
                     char ch = Convert.ToChar(Console.ReadLine());
-                    
+                    switch(ch)
+                    {
+                        case '1':
+                            {
+                                obj.addNote();
+                            }
+                            break;
+
+                        
+                    }
                 }
                 catch(Exception)
                 {
