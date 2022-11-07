@@ -14,11 +14,6 @@ namespace Single_linked_list
         public Node next;
 
     }
-
-    class List
-    {
-
-    }
     class Program
     {
         static void Main(string[] args)
