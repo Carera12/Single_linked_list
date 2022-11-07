@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Single_linked_list
@@ -13,6 +14,15 @@ namespace Single_linked_list
         public string name;
         public Node next;
 
+    }
+
+    class List
+    {
+        Node START;
+        public List()
+        {
+            START = null;
+        }
     }
     class Program
     {
