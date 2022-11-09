@@ -40,7 +40,7 @@ namespace Single_linked_list
             {
                 if((START != null) && (rollNo == START.rollNumber))
                 {
-                    Console.WriteLine();
+                    Console.WriteLine("\nDuplicat roll numbers not allowed\n");
                     return;
                 }
                 newnode.next = START;
@@ -55,11 +55,11 @@ namespace Single_linked_list
             {
                 if(rollNo == current.rollNumber)
                 {
-                    Console.WriteLine();
+                    Console.WriteLine("\nDuplicat roll numbers not allowed\n");
                     return;
                 }
-                previous.next = current;
-                previous.next = newnode;
+                previous = current;
+                current = current.next;
             }
             newnode.next = current;
             previous.next = newnode;
